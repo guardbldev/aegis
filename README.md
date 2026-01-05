@@ -1,10 +1,4 @@
 # **Aegis**
-
-> **Composable permissions & guards for Discord bots**
->
-> *Enterprise-grade, modular, explainable permissions system for Discord.js*
-
-
 ---
 
 ## 💡 What is Aegis?
@@ -21,7 +15,7 @@
 - Tracks audit trail of permissions & denials
 - Ready for dashboards and admin panels
 
-**Works with:**
+**This package works with:**
 - Slash commands
 - Prefix commands
 - Buttons
@@ -33,36 +27,35 @@
 
 ## ✨ **Features**
 
-1. **Permission Guards as Middleware**
-   - **Express-style**
+ **Permission Guards as Middleware**
    - Chainable, async-ready, short-circuiting guards
 
-2. **Multi-Level Permissions**
+ **Multi-Level Permissions**
    - User → Role → Channel → Guild → Global
 
-3. **Custom Permission Resolvers**
+ **Custom Permission Resolvers**
    - Register your own logic and compose guards
 
-4. **Universal Command & UI Protection**
+ **Universal Command & UI Protection**
    - Apply guards to commands *and* UI/components (buttons, modals, etc.)
 
-5. **Cooldown/Bypass Integration**
+ **Cooldown/Bypass Integration**
    - Only certain users (e.g. mods) can bypass cooldowns/limits
 
-6. **Permission Presets**
+ **Permission Presets**
    - Built-in: `admin`, `moderator`, `trusted`, `public`
 
-7. **Dynamic Permission Editing**
+ **Dynamic Permission Editing**
    - Change permissions at runtime, reload from config/DB
 
-8. **Explainable Permissions**
+ **Explainable Permissions**
    - Every denial has a reason *tree* (for devs/Admins/UIs)
    - Debug mode, user-friendly errors, dashboard output
 
-9. **Storage Adapters**
+ **Storage Adapters**
    - In-memory, JSON (file), MongoDB (extensible)
 
-10. **Audit Logging**
+ **Audit Logging**
     - Track permission changes & denied attempts
     - Optional webhook support
 
@@ -95,7 +88,7 @@ if (!result.allowed) {
 
 ---
 
-## 🧑‍💻 **Middleware Permission ("Express-style")**
+## 🧑‍💻 **Middleware Permission**
 
 Aegis permissions work like Express middleware for Discord:
 
@@ -119,7 +112,7 @@ if (!result.allowed) {
 }
 ```
 
-**Comments:**  
+**Explanation:**  
 \* Each guard is a sync or async middleware function  
 \* Evaluation stops on first denial  
 \* Guards can set debug info for dashboards/developers  
@@ -127,9 +120,7 @@ if (!result.allowed) {
 
 ---
 
-## 🛑 **Explainable Permissions ("Access denied" with Reason Trees)**
-
-No more mysterious denials! Aegis outputs a reason tree for every failed check:
+## 🛑 **Explainable Permissions**
 
 ```ts
 import { PermissionChain } from "aegis/core/MiddlewareChain";
@@ -159,7 +150,7 @@ if (!result.allowed) {
 }
 ```
 
-**Sample output:**
+**Output:**
 ```
 Denied:
 - Missing role: Moderator
@@ -167,14 +158,14 @@ Denied:
 - Command only allowed in channel(s): mod-chat
 ```
 
-**Comments:**  
+**Explanation:**  
 \* Every denial has a human-friendly, admin-friendly, or machine-readable reason  
 \* Reason-trees can be consumed by UIs/dashboards/logs  
 \* Great for debugging, server admin panels, and user feedback
 
 ---
 
-## 💡 **Other Usage Examples**
+## 💡 **Other Examples**
 
 ### Simple Role Guard
 ```ts
@@ -257,7 +248,7 @@ Button()
 
 ---
 
-## 🧩 **Pluggable Storage/Adapters**
+##  **Pluggable Storage/Adapters**
 
 Out of the box:
 
@@ -293,7 +284,7 @@ logger.log({
 
 ---
 
-## 📚 **Docs**
+## 📚 **Docs** - WEBSITE COMING SOON
 
 - `/docs/guards.md` — Writing custom guards/middleware
 - `/docs/presets.md` — Permission presets usage
@@ -302,10 +293,3 @@ logger.log({
 
 ---
 
-## 📄 **License**
-
-MIT
-
----
-
-> ### 🦾 *Aegis* turns permission spaghetti into clean, debug-friendly, cross-feature logic—making permission systems easy to reason about, audit, and extend for any Discord bot or UI.
