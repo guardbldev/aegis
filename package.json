@@ -1,0 +1,37 @@
+{
+  "name": "aegis",
+  "version": "1.1.0",
+  "description": "Composable permissions & guards for Discord bots.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./guards": "./dist/guards",
+    "./core": "./dist/core",
+    "./presets": "./dist/presets",
+    "./storage": "./dist/storage",
+    "./audit": "./dist/audit",
+    "./integration": "./dist/integration"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Placeholder for tests\""
+  },
+  "repository": "git+https://github.com/yourname/aegis.git",
+  "keywords": [
+    "discord",
+    "permissions",
+    "discord.js",
+    "commands",
+    "middleware",
+    "bot"
+  ],
+  "dependencies": {
+    "discord.js": "^14.0.0",
+    "node-fetch": "^2.6.7",
+    "mongodb": "^5.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "license": "MIT"
+}
