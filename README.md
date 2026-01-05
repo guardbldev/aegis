@@ -159,9 +159,9 @@ Denied:
 ```
 
 **Explanation:**  
-\* Every denial has a human-friendly, admin-friendly, or machine-readable reason  
+\* Every denial has a reason  
 \* Reason-trees can be consumed by UIs/dashboards/logs  
-\* Great for debugging, server admin panels, and user feedback
+\* This is great for debugging, server admin panels, and user feedback
 
 ---
 
